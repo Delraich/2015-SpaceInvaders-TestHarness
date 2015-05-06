@@ -108,7 +108,7 @@ namespace SpaceInvaders.Entities
         {
             if (entity.GetType() != typeof (Wall) || (entity.Y != 0 && entity.Y != GetMap().Height - 1)) return false;
 
-            var player = GetPlayer();
+            var player = GetOpponent();
             player.Lives = -1;
             if (player.Ship != null)
             {
