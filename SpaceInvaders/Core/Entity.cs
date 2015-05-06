@@ -55,6 +55,11 @@ namespace SpaceInvaders.Core
         {
             return Match.GetInstance().GetPlayer(PlayerNumber);
         }
+        
+        protected Player GetOpponent()
+        {
+            return Match.GetInstance().GetPlayer(PlayerNumber == 1 ? 2 : 1);
+        }
 
         protected Map GetMap()
         {
